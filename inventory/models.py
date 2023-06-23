@@ -11,7 +11,7 @@ class Ingredient(models.Model):
     unit_price = models.FloatField()
     
     def __str__(self):
-        return self.name+"Available Qty: "+ self.quantity+" "+ self.unit
+        return self.name+"Available Qty: "+ str(self.quantity)+" "+ str(self.unit)
     
     
 class MenuItem(models.Model):
@@ -19,7 +19,7 @@ class MenuItem(models.Model):
     price = models.FloatField()
     
     def __str__(self):
-        return self.title +"price: "+ self.price
+        return self.title +"price: "+ str(self.price)
     
 
 class RecipeRequiremen(models.Model):
@@ -28,7 +28,7 @@ class RecipeRequiremen(models.Model):
     quantity = models.FloatField()
     
     def __str__(self):
-        return self.quantity + " " + self.ingredient.unit +" of "+ self.ingredient.name +"for making "+ self.menu_item
+        return str(self.quantity) + " " + self.ingredient.unit +" of "+ self.ingredient.name +"for making "+ self.menu_item.title
     
 
 class Purchase(models.Model):
