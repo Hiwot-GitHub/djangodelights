@@ -1,0 +1,28 @@
+{% extends './base.html' %}
+
+{% block title %}home{% endblock %}
+
+{% block content %}
+    <h1>Ingredients</h1>
+    <p>Ingredients</p>
+    <table>
+        
+            <tr>
+             <th>name</th>
+             <th>quantity</th>
+             <th>unit</th>
+             <th>unit_price</th>
+            </tr>
+            
+            {% for item in ingredient_list %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.unit }}</td>
+                <td>{{ item.unit_price }}</td>
+            </tr>
+            {% endfor %}
+        
+    </table>
+   
+{% endblock %}

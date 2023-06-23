@@ -1,0 +1,11 @@
+{% extends './base.html' %}
+
+{% block title %}home{% endblock %}
+
+{% block content %}
+ <ul>
+    {% for recipereq in reciperequiremen_list %}
+    <li>{{ recipereq }}</li>
+    {% endfor %}
+ </ul>
+{% endblock %}
